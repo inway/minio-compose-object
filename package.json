@@ -1,0 +1,17 @@
+{
+  "name": "minio-compose-object",
+  "version": "1.0.0",
+  "description": "",
+  "license": "MIT",
+  "author": "",
+  "type": "module",
+  "main": "index.mjs",
+  "scripts": {
+    "start": "node index.mjs",
+    "test": "exit 0"
+  },
+  "dependencies": {
+    "dotenv": "^17.2.3",
+    "minio": "^8.0.6"
+  }
+}
