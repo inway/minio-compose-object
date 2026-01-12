@@ -22,12 +22,12 @@ Then run the compose operation:
 $ node index.mjs
 ```
 
-## Test with sequential uploads
+## Test with parallel uploads (with limited concurrency)
 
-Use `minio-js` from our fork instead to test sequential uploads:
+Use `minio-js` from our fork instead to test limited concurrency uploads:
 
 ```console
-$ npm install https://github.com/inway/minio-js/releases/download/v8.0.7-fix.0/minio-8.0.7.tgz
+$ npm install https://github.com/inway/minio-js/releases/download/v8.0.7-fix.1/minio-8.0.7.tgz
 ```
 
 To switch back to the original `minio-js` library, run:
@@ -43,4 +43,5 @@ Sample `mc admin trace` files are included in the `traces/` folder for reference
 Traces for compose operation with 1000 parts:
 
 - [parallel-1000-parts.trace](./traces/parallel-1000-parts.trace) - with current implementation,
-- [sequential-1000-parts.trace](./traces/sequential-1000-parts.trace) - for sequential approach proposed here (https://github.com/inway/minio-js/commit/3704b5dc3d42bb18a20baf5a0425267766becf48).
+- [sequential-1000-parts.trace](./traces/sequential-1000-parts.trace) - for sequential approach proposed here (inway/minio-js@3704b5dc3d42bb18a20baf5a0425267766becf48),
+- [parallel-concurrent-1000-parts.trace](./traces/parallel-concurrent-1000-parts.trace) - with parallel uploads, but with limited concurrency (inway/minio-js@b7110976d4ef8e9b7b01e0002ee7fe6f7b1869eb).

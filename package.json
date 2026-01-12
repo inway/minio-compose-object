@@ -12,6 +12,6 @@
   },
   "dependencies": {
     "dotenv": "^17.2.3",
-    "minio": "^8.0.6"
+    "minio": "https://github.com/inway/minio-js/releases/download/v8.0.7-fix.1/minio-8.0.7.tgz"
   }
 }
